@@ -1,12 +1,31 @@
 // START - USED SERVICES
 /*
+ *	UserService.changePassword
+ *		PARAMS: 
+ *		RETURN: object
+ *				
+ *
+ *	UserService.create
+ *		PARAMS: 
+ *		
+ *
  *	UserService.delete
  *		PARAMS: 
  *					ObjectId id - Id
  *		
  *
+ *	UserService.get
+ *		PARAMS: 
+ *					ObjectId id - Id 
+ *		
+ *
  *	UserService.list
  *		PARAMS: 
+ *		
+ *
+ *	UserService.update
+ *		PARAMS: 
+ *					ObjectId id - Id
  *		
  *
  */

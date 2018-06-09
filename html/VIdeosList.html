@@ -1,0 +1,65 @@
+<!-- IMPORT MODULE DETAIL -->
+<!-- 
+
+	Module : 	VIdeosList
+	
+	Links : 	VIdeosEdit
+					/videoses/{id}
+.				
+	
+	Nesteds : 	
+				
+-->
+<!-- /IMPORT MODULE DETAIL -->
+<div ng-controller="VIdeosListController">
+	
+	<h1>VIdeosList</h1>
+	
+	<!-- SEARCH FORM -->
+	<div class="well">
+	    <form name="form_search" class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3">
+					<label for="Name">Name</label>
+				</div>
+				<div class="col-sm-9 form-group" >
+					<input type="text" ng-model="search.Name" class="form-control" name="Name" id="Name" >
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<label for="URL">URL</label>
+				</div>
+				<div class="col-sm-9 form-group" >
+					<input type="text" ng-model="search.URL" class="form-control" name="URL" id="URL" >
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<!-- TABLE -->
+	<table class="table table-condensed table-striped table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>_id</th>
+				<th>Name</th>
+				<th>URL</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in list | filter: {  Name:search.Name,  URL:search.URL,  }">
+				<td ng-bind="item._id" ng-link="/videoses/{{item._id}}"></td>
+				<td ng-bind="item.Name"></td>
+				<td ng-bind="item.URL"></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<div class="mb-20" ng-if="list.$resolved && (list | filter :{   Name:search.Name,  URL:search.URL,  }).length == 0">
+        <b>No result found</b>
+    </div>
+
+	<!-- BUTTON -->
+	<button class="btn btn-primary" ng-link="/videoses/new">New</button>
+	
+</div>

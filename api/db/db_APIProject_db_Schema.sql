@@ -29,6 +29,23 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 
 
+--
+-- Struttura della tabella `videos`
+--
+
+CREATE TABLE IF NOT EXISTS `videos` (
+	`Name` varchar(40) ,
+	`URL` varchar(40) ,
+	
+	-- RELAZIONI
+
+	`_id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT 
+
+);
+
+
+
+
 
 
 

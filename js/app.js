@@ -24,11 +24,29 @@ var app = angular.module('APIProject_App', [
 //DO NOT EDIT THIS ROUTES, USE NEXT COMMENT SECTION
 
 // START - ROUTE
-	.when('/dashboard', {
-	  templateUrl: 'html/Dashboard.html',
+	.when('/home', {
+	  templateUrl: 'html/Home.html',
+	  resolve: {
+		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
+	  },
 	})
 	.when('/users', {
 	  templateUrl: 'html/UserList.html',
+	  resolve: {
+		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
+	  },
+	})
+	.when('/users', {
+	  templateUrl: 'html/UserList.html',
+	})
+	.when('/videoses/:id', {
+	  templateUrl: 'html/VIdeosEdit.html',
+	  resolve: {
+		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
+	  },
+	})
+	.when('/videoses', {
+	  templateUrl: 'html/VIdeosList.html',
 	  resolve: {
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
