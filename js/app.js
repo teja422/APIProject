@@ -24,6 +24,9 @@ var app = angular.module('APIProject_App', [
 //DO NOT EDIT THIS ROUTES, USE NEXT COMMENT SECTION
 
 // START - ROUTE
+	.when('/dashboard', {
+	  templateUrl: 'html/Dashboard.html',
+	})
 	.when('/users', {
 	  templateUrl: 'html/UserList.html',
 	  resolve: {
