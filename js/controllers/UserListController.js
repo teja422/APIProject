@@ -11,12 +11,10 @@
  *
  *	UserService.delete
  *		PARAMS: 
- *					ObjectId id - Id
  *		
  *
  *	UserService.get
  *		PARAMS: 
- *					ObjectId id - Id 
  *		
  *
  *	UserService.list
@@ -25,7 +23,6 @@
  *
  *	UserService.update
  *		PARAMS: 
- *					ObjectId id - Id
  *		
  *
  */

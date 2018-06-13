@@ -45,6 +45,12 @@ var app = angular.module('APIProject_App', [
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
 	})
+	.when('/videoses/:id', {
+	  templateUrl: 'html/VIdeosEdit.html',
+	  resolve: {
+		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
+	  },
+	})
 	.when('/videoses', {
 	  templateUrl: 'html/VIdeosList.html',
 	  resolve: {
