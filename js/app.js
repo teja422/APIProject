@@ -36,23 +36,8 @@ var app = angular.module('APIProject_App', [
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
 	})
-	.when('/users', {
-	  templateUrl: 'html/UserList.html',
-	})
 	.when('/videoses/:id', {
 	  templateUrl: 'html/VIdeosEdit.html',
-	  resolve: {
-		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
-	  },
-	})
-	.when('/videoses/:id', {
-	  templateUrl: 'html/VIdeosEdit.html',
-	  resolve: {
-		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
-	  },
-	})
-	.when('/videoses', {
-	  templateUrl: 'html/VIdeosList.html',
 	  resolve: {
 		  user: ["AuthenticationService", function(AuthenticationService) { return AuthenticationService.isAuthenticated(); }]
 	  },
